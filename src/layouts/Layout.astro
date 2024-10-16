@@ -1,0 +1,22 @@
+---
+import Header from "../components/Header/Header.astro";
+import Footer from "../components/Footer/Footer.astro";
+import CommonHead from "../components/Header/CommonHead.astro";
+import "../styles/global.css";
+import { fade } from "astro:transitions";
+---
+
+<html lang="ja" transition:animate={fade({ duration: "0.2s" })}>
+	<head>
+		<CommonHead />
+	</head>
+	<body>
+		<Header />
+		<!-- <h1>{pageTitle}</h1> -->
+		<slot />
+		<Footer transition:animate="slide" />
+		<script>
+			import "../scripts/menu.js";
+		</script>
+	</body>
+</html>

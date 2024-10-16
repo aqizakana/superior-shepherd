@@ -1,0 +1,145 @@
+/* //palette = [#306230,#DAE3D3 ,#FFFFFF, #474A36,#C2A995] */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    background-color: rgba(15, 30, 20, 1);
+    font-family: Osward-100;
+    transition: 0.5s ease-in-out;
+    overflow-y: auto;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    max-width: 80ch;
+    padding-bottom: 1rem;
+    line-height: 1.5;
+
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+label,
+a {
+    color: #FAF0DC;
+    font-family: "Raleway";
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a {
+    font-family: "Oswald";
+    text-decoration: none;
+    font-weight: 100;
+    line-height: 10%;
+}
+
+h1:hover {
+    color: red;
+}
+
+header {
+    margin: auto;
+
+}
+
+.expanded {
+    display: unset;
+}
+
+/* ナビゲーションのスタイル */
+.hamburger {
+    padding: 5%;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #ff9776;
+}
+
+.nav-links {
+    display: none;
+}
+
+.nav-links a {
+    padding: 2%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover,
+a:focus {
+
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+}
+
+
+@media screen and (min-width: 636px) {
+    .nav-links {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0;
+        list-style: none;
+        margin: 0;
+    }
+
+
+    .hamburger {
+        display: none;
+    }
+}
+
+html.dark {
+    background-color: #0d0950;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+
+.dark .nav-links a {
+    color: #fff;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+}
+
+.form {
+    margin: auto;
+}
+
+.form .form__input {
+    font-size: 1rem;
+    font-family: "Raleway";
+    color: #474A36;
+    font-style: none;
+}
+
+.form__input:hover {
+    background-color: #C2A995;
+    color: #474A36;
+    font-style: italic;
+}
+
+.form__input--big {
+    font-size: 1.5rem;
+}

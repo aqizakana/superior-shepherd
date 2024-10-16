@@ -1,0 +1,31 @@
+---
+import Footer from "../components/Footer.astro";
+const { title } = Astro.props;
+---
+
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <nav>
+            <a href="">ホーム</a>
+            <a href="/about/">About</a>
+            <a href="/dog/clifford" data-astro-prefetch>イヌ</a>
+        </nav>
+        <h1>{title}</h1>
+        <article>
+            <slot />
+            <p>ここはスロットです。</p>
+            <!-- ここにコンテンツが挿入されます -->
+        </article>
+        <Footer />
+    </body>
+    <style>
+        h1 {
+            font-size: 2rem;
+        }
+    </style>
+</html>

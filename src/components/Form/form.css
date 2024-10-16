@@ -1,0 +1,22 @@
+.search-form {
+    width: 200px;
+}
+
+.search-form__input {
+    width: 50px;
+}
+
+
+.search-form__button_disabled {
+    background-color: gray;
+}
+
+.search-form__button_disabled:hover {
+    background-color: green;
+}
+
+
+
+.search-form_focus {
+    background-color: green;
+}

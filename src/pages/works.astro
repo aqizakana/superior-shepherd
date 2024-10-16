@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../layouts/Layout.astro";
+import type { MarkdownInstance } from "astro";
+const allPosts = await Astro.glob("../pages/works/*.md");
+const dogPosts = await Astro.glob("../pages/dog/*.astro");
+const pageTitle = "私のAstro学習ブログ";
+interface Posts {
+    url: string | any;
+    frontmatter: {
+        title: string;
+    };
+}
+function postGet(posts: MarkdownInstance<Record<string, any>>[]): Posts[] {
+    return posts.map((post) => {
+        return {
+            url: post.url,
+            frontmatter: {
+                title: post.frontmatter.title,
+            },
+        };
+    });
+}
+const postsData = postGet(allPosts);
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <p>ここには、私がAstroを学んでいく旅の様子を投稿します。</p>
+    <ul>
+        {
+            postsData.map((post) => (
+                <li key={post.url}>
+                    <a href={post.url}>{post.frontmatter.title}</a>
+                </li>
+            ))
+        }
+    </ul>
+</BaseLayout>

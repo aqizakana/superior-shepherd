@@ -1,0 +1,10 @@
+---
+import { actions } from "astro:actions";
+---
+
+<form method="POST" action={"/confirmation" + actions.newsletter} class="form">
+    <label class="form form__input"
+        >E-mail <input required type="email" name="email" /></label
+    >
+    <button class="form__input--big"> Sign up</button>
+</form>

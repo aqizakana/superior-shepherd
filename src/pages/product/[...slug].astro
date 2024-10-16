@@ -1,0 +1,43 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import { actions } from "astro:actions";
+
+export async function getStaticPaths() {
+    const pages = [
+        {
+            slug: "AAA",
+            title: "Astroストア",
+            text: "Astroにようこそ！",
+        },
+        {
+            slug: "products",
+            title: "Astroグッズ",
+            text: "たくさんの商品があります",
+        },
+        {
+            slug: "products/astro-handbook",
+            title: "究極のAstroハンドブック",
+            text: "Astroについて学びたければ、この本を読む必要があります",
+        },
+    ];
+    return pages.map(({ slug, title, text }) => {
+        return {
+            params: { slug },
+            props: { title, text },
+        };
+    });
+}
+
+const { title, text } = Astro.props;
+---
+
+<Layout title="">
+    <head>
+        <title>{title}</title>
+    </head>
+    <body>
+        <h1>{title}</h1>
+        <p>{text}</p>
+    </body>
+</Layout>

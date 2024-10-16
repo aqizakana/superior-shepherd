@@ -1,0 +1,21 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ReactPage from "../react/index.tsx";
+import User from "../../components/User/User.astro";
+const number = 42;
+const add = (a: number) => {
+    return a + number;
+};
+---
+
+<Layout title="">
+    <head>
+        <title>About</title>
+    </head>
+    <body>
+        <h1>About Page</h1>
+        <p>This is the about page.</p>
+        <p>{add(5)}</p>
+        <User />
+    </body>
+</Layout>

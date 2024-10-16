@@ -1,0 +1,20 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export function getStaticPaths() {
+    return [
+        { params: { dog: "clifford" } },
+        { params: { dog: "lassie" } },
+        { params: { dog: "snoopy" } },
+    ];
+}
+const { dog } = Astro.params;
+---
+
+<Layout title="dog">
+    <div>
+        <h2>{dog}</h2>
+        <p>ここはドッグページです。</p>
+        <p>ドッグの名前は{dog}です。</p>
+    </div>
+</Layout>

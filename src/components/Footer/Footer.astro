@@ -9,23 +9,36 @@ import Social from "./Social.astro";
         margin: 0;
     }
     .container {
-        background-color: #f0f0f0;
-        margin: 0%;
+        bottom: 0rem;
+        position: fixed;
+        justify-content: center;
+        width: 100%;
+    }
+    .container__line {
+        display: block;
+        justify-content: center;
+        width: calc(100% - 2rem);
+        height: 1px;
+        background-color: #ff9776;
+        margin: 0 1rem;
     }
 
     footer {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 1rem;
-        position: absolute;
-        margin: 0%;
         bottom: 0rem;
-        width: 100vh;
+        width: 100%;
+    }
+    p {
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin: 1rem;
     }
 </style>
 
 <div class="container">
+    <span class="container__line"></span>
     <footer>
         <p>まるしー:Shinnosuke Uota</p>
     </footer>

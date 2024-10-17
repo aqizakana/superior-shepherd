@@ -8,7 +8,6 @@ const result = Astro.getActionResult(actions.newsletter);
 ---
 
 <Layout pageTitle="ホームページ">
-	<Hello />
 	<Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 
 	<button id="button">Get greeting</button>
@@ -18,15 +17,7 @@ const result = Astro.getActionResult(actions.newsletter);
 			<p class="error">Unable to sign up. Please try again later.</p>
 		)
 	}
-	<div class="plate">
-		<div class="plate__h1"></div>
-		<div class="plate__h1">
-			<h1 class="text-gradient">Astroストア</h1>
-			<p>
-				このサイトはAstroで作成されました。Astroは、高速でシンプルなWebサイトを構築するためのモダンなツールです。
-			</p>
-		</div>
-	</div>
+
 	<button id="btn">Click me</button>
 
 	<script>
@@ -89,18 +80,6 @@ const result = Astro.getActionResult(actions.newsletter);
 		background-size: 400%;
 		background-position: 0%;
 		color: black;
-	}
-	.plate {
-		background-color: aliceblue;
-		padding: 2rem;
-		border-radius: 1rem;
-		width: 100%;
-		margin: 5rem;
-	}
-	.plate__h1 {
-		text-align: center;
-		display: flex;
-		flex-direction: row;
 	}
 
 	.instructions {

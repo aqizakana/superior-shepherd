@@ -1,0 +1,12 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import ThreejsLogo from "./ThreejsLogo.tsx";
+---
+
+<Layout>
+    <div>
+        <h1>Three.js</h1>
+        <ThreejsLogo client:only="react" />
+    </div>
+</Layout>

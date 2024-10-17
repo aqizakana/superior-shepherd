@@ -5,18 +5,18 @@ html {
     background-color: rgba(15, 30, 20, 1);
     font-family: Osward-100;
     transition: 0.5s ease-in-out;
-    overflow-y: auto;
+    overflow: none;
 }
 
 body {
-    margin: 0 auto;
+
     width: 100%;
-    min-height: 100vh;
+    height: auto;
     position: relative;
-    max-width: 80ch;
+    /* max-width: 80ch; */
     padding-bottom: 1rem;
     line-height: 1.5;
-
+    overflow: none;
 }
 
 h1,
@@ -72,12 +72,13 @@ header {
     background-color: #ff9776;
     display: none;
     margin: 1rem auto;
-    transition: 0.5s ease-in-out;
+    justify-content: end;
+
 }
 
 .nav-links a {
     display: block;
-    padding: 2rem 0;
+    padding: 1rem;
     text-align: center;
     text-decoration: none;
     font-size: 1.2rem;
@@ -89,6 +90,7 @@ a:focus {
 
     font-weight: bold;
     transition: 0.2s ease-in-out;
+    right: 0%;
 }
 
 .expanded {
@@ -97,16 +99,18 @@ a:focus {
 
 @media screen and (min-width: 636px) {
     .nav-links {
-        margin-left: 5em;
+        margin-right: 1em;
         display: block;
         position: static;
         width: auto;
         background: none;
+
     }
 
     .nav-links a {
         display: inline-block;
-        padding: 15px 20px;
+        padding: 1rem;
+
     }
 
     .hamburger {

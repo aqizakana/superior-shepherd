@@ -1,3 +1,6 @@
+# これは、Astroの練習がてら作ったものです。
+
+
 # Astro Starter Kit: Basics
 
 ```sh
